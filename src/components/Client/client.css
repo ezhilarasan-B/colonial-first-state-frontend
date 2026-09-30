@@ -1,0 +1,362 @@
+/* Client Management Styles */
+
+.client-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.client-view__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1.25rem;
+}
+
+.client-view__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.client-view__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.client-view__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.client-view__selection-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 1rem;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  animation: client-slide-down 0.2s ease-out;
+}
+
+.client-view__selection-text {
+  font-size: 0.875rem;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.client-view__table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.client-view__pagination-wrapper {
+  margin-top: 0.5rem;
+}
+
+.client-view__delete-warning {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8125rem;
+  color: #b91c1c;
+  line-height: 1.4;
+}
+
+/* Client Table Specifics */
+.client-table__name-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-table__name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.client-table__id {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.client-table__contact-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.client-table__email {
+  color: #0284c7;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.client-table__email:hover {
+  text-decoration: underline;
+}
+
+.client-table__phone {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.client-table__staff-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.client-table__staff-icon {
+  font-size: 0.625rem;
+  color: #0284c7;
+}
+
+.client-table__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Client Form Page */
+.client-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.client-form__header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.client-form__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.client-form__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.client-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.client-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
+.client-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.client-form__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.client-form__required {
+  color: #dc2626;
+  margin-left: 0.125rem;
+}
+
+.client-form__select-wrapper {
+  position: relative;
+}
+
+.client-form__select {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  font-family: inherit;
+}
+
+.client-form__select:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.client-form__select--error {
+  border-color: #dc2626;
+}
+
+.client-form__select:disabled {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.client-form__error {
+  font-size: 0.75rem;
+  color: #dc2626;
+  margin-top: 0.25rem;
+}
+
+.client-form__help-text {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.client-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+@keyframes client-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .client-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-form__group {
+    grid-column: span 1 !important;
+  }
+
+  .client-form-card {
+    padding: 1.25rem;
+  }
+
+  .client-form__footer {
+    flex-direction: column-reverse;
+  }
+
+  .client-form__footer button {
+    width: 100%;
+  }
+
+  .client-view__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .client-view__header-actions button {
+    width: 100%;
+  }
+}
+
+/* Action Dropdown Menu */
+.action-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.action-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 600;
+}
+
+.action-dropdown__caret {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.action-dropdown__caret--open {
+  transform: rotate(180deg);
+}
+
+.action-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 140px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  padding: 0.375rem;
+  z-index: 50;
+  animation: client-slide-down 0.15s ease-out;
+}
+
+.action-dropdown__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.action-dropdown__item:hover {
+  background-color: #f1f5f9;
+}
+
+.action-dropdown__item--danger {
+  color: #dc2626;
+}
+
+.action-dropdown__item--danger:hover {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.action-dropdown__item-icon {
+  width: 16px;
+  height: 16px;
+}

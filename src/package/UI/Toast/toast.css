@@ -1,0 +1,123 @@
+.ui-toast-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 2000;
+  max-width: 420px;
+  width: calc(100% - 2rem);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.ui-toast-container--bottom-right {
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.ui-toast-container--bottom-left {
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.ui-toast-container--top-right {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.ui-toast-container--top-left {
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.ui-toast {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  pointer-events: auto;
+  animation: ui-toast-slide-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.ui-toast__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ui-toast__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.ui-toast__message {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #1e293b;
+  line-height: 1.25rem;
+  word-break: break-word;
+}
+
+.ui-toast__close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.125rem 0.25rem;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.ui-toast__close:hover {
+  color: #475569;
+}
+
+/* Variant Styles */
+.ui-toast--success {
+  border-left: 4px solid #16a34a;
+}
+.ui-toast--success .ui-toast__icon {
+  color: #16a34a;
+}
+
+.ui-toast--error {
+  border-left: 4px solid #dc2626;
+}
+.ui-toast--error .ui-toast__icon {
+  color: #dc2626;
+}
+
+.ui-toast--warning {
+  border-left: 4px solid #eab308;
+}
+.ui-toast--warning .ui-toast__icon {
+  color: #eab308;
+}
+
+.ui-toast--info {
+  border-left: 4px solid #2563eb;
+}
+.ui-toast--info .ui-toast__icon {
+  color: #2563eb;
+}
+
+@keyframes ui-toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+

@@ -1,0 +1,321 @@
+/* Staff Management Styles */
+
+.staff-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.staff-view__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+}
+
+.staff-view__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1.25rem;
+}
+
+.staff-view__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.staff-view__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.staff-view__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Selection Bar */
+.staff-view__selection-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 1rem;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  animation: staff-slide-down 0.2s ease-out;
+}
+
+.staff-view__selection-text {
+  font-size: 0.875rem;
+  color: #1e40af;
+}
+
+/* Staff Table Specifics */
+.staff-table__name-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-table__name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.staff-table__id {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.staff-table__age-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #f1f5f9;
+  color: #475569;
+  border-radius: 4px;
+}
+
+.staff-table__pincode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  background-color: #f8fafc;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.staff-table__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Modal Details */
+.staff-modal__text {
+  margin: 0 0 1rem 0;
+  font-size: 0.9375rem;
+  color: #334155;
+}
+
+.staff-modal__staff-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.875rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.staff-modal__staff-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.staff-modal__staff-location {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.staff-modal__warning {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #b91c1c;
+  line-height: 1.4;
+}
+
+/* Staff Form Page */
+.staff-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.staff-form__header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.staff-form__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.staff-form__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.staff-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.staff-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 0.25rem;
+}
+
+.staff-form__grid > div:first-child {
+  grid-column: span 2;
+}
+
+.staff-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.staff-form__cache-fallback {
+  margin-top: 1rem;
+}
+
+@keyframes staff-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .staff-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-form__grid > div:first-child {
+    grid-column: span 1;
+  }
+
+  .staff-form-card {
+    padding: 1.25rem;
+  }
+
+  .staff-form__footer {
+    flex-direction: column-reverse;
+  }
+
+  .staff-form__footer button {
+    width: 100%;
+  }
+
+  .staff-view__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .staff-view__actions {
+    width: 100%;
+  }
+
+  .staff-view__actions button {
+    width: 100%;
+  }
+}
+
+/* Action Dropdown Menu */
+.action-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.action-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 600;
+}
+
+.action-dropdown__caret {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.action-dropdown__caret--open {
+  transform: rotate(180deg);
+}
+
+.action-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 140px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  padding: 0.375rem;
+  z-index: 50;
+  animation: staff-slide-down 0.15s ease-out;
+}
+
+.action-dropdown__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.action-dropdown__item:hover {
+  background-color: #f1f5f9;
+}
+
+.action-dropdown__item--danger {
+  color: #dc2626;
+}
+
+.action-dropdown__item--danger:hover {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.action-dropdown__item-icon {
+  width: 16px;
+  height: 16px;
+}

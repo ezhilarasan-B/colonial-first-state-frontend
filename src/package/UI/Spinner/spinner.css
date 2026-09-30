@@ -1,0 +1,49 @@
+.ui-spinner-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.ui-spinner {
+  border: 3px solid #e2e8f0;
+  border-top-color: #0f172a;
+  border-radius: 50%;
+  animation: ui-spin 0.75s linear infinite;
+  box-sizing: border-box;
+}
+
+.ui-spinner--sm {
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+}
+
+.ui-spinner--md {
+  width: 32px;
+  height: 32px;
+  border-width: 3px;
+}
+
+.ui-spinner--lg {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+.ui-spinner__label {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@keyframes ui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
